@@ -84,13 +84,36 @@ var transmogrifier = function(num1, num2, num3){
 // Example: wordReverse('we are good friends') => 'friends good are we'
 
 
+var wordReverse = function(message){
+    //stuff the function does
+    var splitArray = message.split(' ');
+    var reversedArray = splitArray.reverse();
+    var reversedMessage = reversedArray.join(' ');
+
+    return reversedMessage
+
+}
+wordReverse("Hello this is hard");
+/*
+
 var wordReverse = function(arr){
    //want to reverse the order of the array I put into the wordReverse 'machine'
-    console.log(arr.reverse())
+   return (arr(reverseArray)); 
+   console.log(arr.reverse())
     }
 //some arrays I've made
 var wordsGoingToBeReversed = ['dog ', 'on' , 'sat ', 'cat '];
-var anotherArray = ['mango ', 'apple', 'cherry ', 'pineapple'];
+
+var reverseArray = wordsGoingToBeReversed.reverse();
+reverseArray.join(' ');
+
+
+
 //calling the wordReverse 'machine'
-wordReverse(anotherArray);
+wordReverse(reverseArray);
+
+var anotherArray = ['mango ', 'apple', 'cherry ', 'pineapple'];
+
+
+
 
