@@ -2,14 +2,14 @@ var faveRecipe = {
     title: 'Minestrone Soup',
     servings: 4,
     ingredients: ['canned tomatoes', 'pasta', 'chilli', 'vegetables']
-}
+    }
 
 console.log(faveRecipe.title);
 console.log('Serves: ' + faveRecipe.servings);
 console.log('Ingredients: ');
 for (var i=0; i<faveRecipe.ingredients.length; i++){
     console.log (faveRecipe.ingredients[i]);
-}
+    }
 
 
 
@@ -66,3 +66,5 @@ var faveMovie = {
     stars: ['Tommy Wiseau', ' Greg Sestero', ' Juliette Danielle', ' Phillip Haldiman']
 }
 console.log(faveMovie.title + ' runs for ' + faveMovie.duration + '. Stars: ' + faveMovie.stars)
+
+
