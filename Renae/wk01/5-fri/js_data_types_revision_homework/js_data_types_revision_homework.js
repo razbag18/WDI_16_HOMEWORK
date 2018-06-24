@@ -208,21 +208,17 @@ for (i=1; i<=100; i++){
     }
 }      
 
-//NEED HELP FINSIHING FUNCTION
-var callNum = function(num){
-    var array = [];//do i need an array and push something into the new array?
-    for (i=1; i<=num; i++){//dont need to run through from 1 - 100 anymore. 
-        //I want to put in any number i want in and get it printed
-        if (i % 3 === 0 && i % 5 === 0){
-            return("FizzBuzz")
-        }else if (i % 3 === 0){
-            return("Fizz")
-        }else if (i % 5 === 0){
-            return("Buzz")
-        }else{console.log(i);
-        }
-    }     
-    
-callNum(3)
 
 //want to call any number and spits out number, "fizz", "buzz", or "fizzbuzz"
+var callNum = function(num){
+if (num % 3 === 0 && num % 5 === 0){
+        return("Fizzbuzz")
+    }else if(num % 3 ===0){
+        return("Fuzz")
+    }else if(num % 5 ===0){
+        return("Buzz")
+    }else{return(num)}
+    }
+
+
+callNum()
