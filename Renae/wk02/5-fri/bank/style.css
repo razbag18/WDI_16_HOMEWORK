@@ -1,0 +1,102 @@
+.bank-container {
+  display: flex;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.online-bank{
+  text-align: center;
+  margin-bottom: 5%;
+  font-size: 30pt;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+
+.cheque {
+  flex: 1;
+  border: 1px solid black;
+  background:  gray;
+  width: 30%;
+  text-align: center;
+  margin-left: 5%;
+  margin-right: 20%;
+}
+
+.savings {
+  flex: 1;
+  border: 1px solid black;
+  background: gray;
+  width: 30%;
+  text-align: center;
+  margin-right: 5%;
+  margin-left: 20%;
+  /* background: #f16530; */
+}
+
+
+/* .savings {
+  flex: 1;
+  border: 1px solid black;
+  background: #f16530;
+  width: 30%;
+  text-align: center;
+  margin-right: 5%;
+  margin-left: 20%;
+} */
+
+.savings .enter-amount, .cheque .cheque-enter-amount {
+background-color: #1aa89c;
+padding: 2.5%;
+width: 80%;
+text-align: left;
+}
+
+.buttons {
+  display: flex;
+  text-align: center;
+  padding-bottom: 5%;  
+
+}
+
+.buttons .deposit-btn, .buttons .withdraw-btn, .buttons .cheque-deposit-btn, .buttons .cheque-withdraw-btn {
+  background-color: white;
+  padding: 10%;
+  border-radius: 20px;
+  width: 70%;
+}
+
+.buttons .deposit-btn:hover, .buttons .cheque-deposit-btn:hover {
+  background-color: #1aa89c;
+}
+
+.buttons .withdraw-btn:hover, .buttons .cheque-withdraw-btn:hover {
+  background-color: red;
+}
+
+
+
+.buttons .withdraw-btn {
+  background-color: white;
+  padding: 10%;
+  border-radius: 20px;
+  width: 70%;
+}
+
+.deposit, .withdraw {
+  flex: 1;
+}
+
+.savings-cust-input, .cheque-cust-input {
+  padding: 5% 10% 5% 10%;
+  
+}
+
+
+
+.logo{
+  font-size: 20pt;
+  border: 2px solid black;
+  background: red;
+  margin-right: 80%;
+  text-align: center;
+  padding: 30px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
