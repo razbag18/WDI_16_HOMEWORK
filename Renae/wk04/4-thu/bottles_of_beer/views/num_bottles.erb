@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Gamja+Flower" rel="stylesheet">
+  <title>Document</title>
+</head>
+<body>
+  <% if params['num_bottles'].to_i == 0 %>
+    <h1>No more bottles of beer on the wall, no more bottles of beer.<br>
+We've taken them down and passed them around; <br>now we're drunk and passed out!</h1>
+<a href ='/'>Start Over</a>
+  <% elsif params['num_bottles'].to_i == 1 %>
+  <h1>1 bottle of beer on the wall, 1 bottle of beer...</h1>
+  <a href ="/<%=params['num_bottles'].to_i - 1%> ">Take the last one down, pass it around...</a>
+  <% else %>
+  <h1><%= params['num_bottles']%> bottles of beer on the wall, <%= params['num_bottles']%> bottles of beer...</h1>
+  <a href ="/<%=params['num_bottles'].to_i - 1%> ">Take one down, pass it around...</a>
+  <% end %>
+
+</body>
+</html>

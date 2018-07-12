@@ -1,0 +1,28 @@
+/* body {
+  background-image: url(/public/fondo-con-patron-de-cervezas_1344-62.jpg);
+} */
+
+body {
+  text-align: center; 
+  background-image: url(https://image.freepik.com/vector-gratis/fondo-con-patron-de-cervezas_1344-62.jpg);
+  margin-top: 200px;
+}  
+
+h1, a {
+  font-family: 'Gamja Flower', cursive;
+  text-align: center;
+}
+
+a {
+  font-size: 20pt;
+}
+
+h1 {
+  font-size: 40pt;
+}
+
+
+
+
+
+
