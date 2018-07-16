@@ -71,25 +71,26 @@ def adoption
         else
           $shelter[0].each do |animal|
             puts "#{animal.name}, #{animal.age}, #{animal.gender}, #{animal.species}"
+            # code broke when put end here to stop the loop. dont know how to write end here and it doesnt break. want to end the loop
             puts "Which one would you like to adopt?: \n"
             pet = gets.chomp
             $shelter[0].each do |animal|
               if pet == animal.name
                 puts "Congratulations #{client.name}, #{animal.name} has been successfully adopted into your family!"
                 
-                $shelter[0].map do |animal|
-                  if  pet == animal.name
-                    adopted = $shelter[0].find_index(animal)
-                    # require 'pry'
-                    # binding.pry
-                  end
-
-                $shelter[1].map do |client|
-                  id = $shelter[1].find_index(client) 
-                  $shelter1[1][id].add_pet(adopted)
-                    break
+                $shelter[1].each do |client| # go through each client
+                  if name == client.name # check if its the right client
+                    client.add_pet(pet) # add pet to right clients
+                    require 'pry'
+                    binding.pry
+                    $shelter[0].each do |animal|
+                    if pet == client.add_pet(pet)
+                      $shelter[0].slice(pet)
+                      
+                    end
                   end
                 end
+                end 
                 break
               end
             end  
@@ -140,5 +141,6 @@ end
 # PROBLEMS
 # WHEN I REGISTER ANIMALS THROUGH OPTION 1 AND THEN VIEW ANIMALS IN THE SHELTER, THE ANIMALS ALL SHOW UP. WHEN I GO TO ADOPT THEM, IT ONLY SHOWS ONE ANIMAL TO ADOPT, EVEN IF THERE IS MULTIPLE ANIMALS IN THE SHELTER?
 # CANT ADOPT 
+
 
 
