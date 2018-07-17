@@ -1,0 +1,21 @@
+<%# <% if @movie_selection['Search']%> 
+<header><h1>MOVIE DATABASE SEARCH</h1>
+
+<div class="form">
+  <form action="/movie_search" method="get">
+  <input class="submission_field" name="movie_request" type=text placeholder="Find movie...">
+  <button>Search</button>
+  </form>
+  </div>
+
+<container class = "movie_selection">
+
+<% @movie_selection['Search'].each do |movie| %>
+
+<p> 
+  <a href="/movie?movie_request=<%= movie['Title'] %>"> <%= movie['Title'] %>
+  </a>
+</p>
+
+<% end %>
+</container>
