@@ -36,7 +36,7 @@ get '/friends/:id' do
 end
 
 #Page that creates my new friend
-post '/friends/' do
+post '/' do
   friend = Friend.new
   friend.name = params[:name]
   friend.image_url = params[:image_url]
