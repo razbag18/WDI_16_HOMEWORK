@@ -13,7 +13,7 @@
 <% @movie_selection['Search'].each do |movie| %>
 
 <p> 
-  <a href="/movie?movie_request=<%= movie['Title'] %>"> <%= movie['Title'] %>
+  <a href="/movie?imdbID=<%= movie['imdbID'] %>"> <%= movie['Title'] %>
   </a>
 </p>
 
