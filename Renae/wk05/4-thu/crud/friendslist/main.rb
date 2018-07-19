@@ -64,7 +64,7 @@ put '/friends/:id' do
   friend.name = params[:name]
   friend.image_url = params[:image_url]
   friend.phone_number = params[:phone_number]
-  dish.save
+  friend.save
 
   redirect "/friends/#{ params[:id] }"
 

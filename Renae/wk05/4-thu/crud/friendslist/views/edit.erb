@@ -1,6 +1,6 @@
 <h1>Edit Friend</h1>
 
-<form action = "/friends/<%=@friends.id %>" method="post"> 
+<form action = "/friends/<%= @friends.id %>" method="post"> 
   <input type = "hidden" name="_method" value="put">
   <label for ="">name</label>
   <%# naming inputs same as our database %>
