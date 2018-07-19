@@ -1,0 +1,17 @@
+
+
+
+<h1>Friends List</h1>
+
+<a href="/friends/new">Add Friend</a>
+<%# Takes you to a new friend form %>
+
+<% @friends.each do |friend| %>
+<%# going through each dishes in my database, printing name in a link directing to the new page /dishes %>
+<p>
+  <a href="/friends/<%= friend.id %>"> 
+    <%= friend.name %>
+  </a> 
+  
+</p>
+<% end %>

@@ -1,0 +1,15 @@
+<h1>Edit Friend</h1>
+
+<form action = "/friends/<%=@friends.id %>" method="post"> 
+  <input type = "hidden" name="_method" value="put">
+  <label for ="">name</label>
+  <%# naming inputs same as our database %>
+  <input type="text" name="name" value="<%= @friends.name %>">
+  <label for "">image url</label>
+  <%# naming inputs same as our database %>
+  <input type= "text" name="image_url" value="<%= @friends.image_url %>">
+  <label for "">phone number</label>
+  <%# naming inputs same as our database %>
+  <input type= "text" name="phone_number" value="<%= @friends.phone_number %>">
+  <button>Edit</button>
+</form>
