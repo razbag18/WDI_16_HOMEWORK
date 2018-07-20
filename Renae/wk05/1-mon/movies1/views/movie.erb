@@ -1,25 +1,25 @@
 <% if @movie %>
 <header><h1>MOVIE DATABASE SEARCH</h1>
- <h1 class = "title"><%= @movie["Title"] %></h1></header>
+ <h1 class = "title"><%= @movie["title"] %></h1></header>
 <container class = "movies">
 
   <container class = "movie_image">
-    <img src ="<%= @movie["Poster"]%>">
+    <img src ="<%= @movie["poster"]%>">
   </container>
 
   <container class = "movie_info">
-    <div class = "director">Director: <%= @movie["Director"]%></div>
-    <div class = "year">Year: <%= @movie["Year"]%></div>
-    <div class = "rated">Rated: <%= @movie["Rated"]%></div>
-    <div class = "country">Country: <%= @movie["Country"]%></div>
+    <div class = "director">Director: <%= @movie["director"]%></div>
+    <div class = "year">Year: <%= @movie["year"]%></div>
+    <div class = "rated">Rated: <%= @movie["rated"]%></div>
+    <div class = "country">Country: <%= @movie["country"]%></div>
 
-    <% if @movie['Ratings'][2] %>
-        <div class = "rating">Rotten Tomato Rating: <%=@movie['Ratings'][2]['Value']%></div>
-        <% else @movie['Ratings'][2] %> 
+    <% if @movie['ratings'] %>
+        <div class = "rating">Rotten Tomato Rating: <%= @movie['ratings'] %></div>
+        <% else @movie['ratings'] %> 
           <div>Rotten Tomato Rating: N/A</div>
       <% end %>
-    <div class = "box_office">Box Office: <%=@movie["BoxOffice"]%></div>
-    <div class = "plot">Plot: <%=@movie["Plot"]%></div>
+    <div class = "box_office">Box Office: <%=@movie["boxoffice"]%></div>
+    <div class = "plot">Plot: <%=@movie["plot"]%></div>
     <div class = "link"><a href='/'><br>Home</a></div>
   </container>
  

@@ -13,12 +13,12 @@ def run_sql(sql)
 end
 
 def save_to_db
-  ratings = if @movie['Ratings'][2]
-    @movie['Ratings'][2]['Value']
+  ratings = if @movie["Ratings"][2]
+    @movie["Ratings"][2]["Value"]
   else
     'N/A'
   end
-  sql = "INSERT INTO movies(title, poster, director, year, rated, country, ratings, boxoffice, plot, imdbID) VALUES ('#{ @movie['Title'] }', '#{ @movie['Poster']}', '#{ @movie['Director']}', '#{@movie['Year']}', '#{@movie['Rated']}','#{ @movie['Country']}', '#{ ratings }', '#{ @movie['BoxOffice']}', '#{@movie['Plot']}', '#{ @movie['imdbID'] }');"
+  sql = "INSERT INTO movies(title, poster, director, year, rated, country, ratings, boxoffice, plot, imdbID) VALUES ('#{ @movie["Title"] }', '#{ @movie["Poster"]}', '#{ @movie["Director"]}', '#{@movie["Year"]}', '#{@movie["Rated"]}','#{ @movie["Country"]}', '#{ ratings }', '#{ @movie["BoxOffice"]}', '#{@movie["Plot"]}', '#{ @movie["imdbID"] }');"
   run_sql(sql)
 end
 
@@ -35,13 +35,14 @@ end
 get '/movie' do
   sql = "SELECT * FROM movies WHERE imdbID = '#{params[:imdbID]}';"
   result = run_sql(sql)
-  if result.cmd_tuples == 0
+  if result.cmd_tuples == 0 # No movies
     @movie = HTTParty.get('http://omdbapi.com/?apikey=2f6435d9&i=' + params[:imdbID])
     save_to_db
+    sql = "SELECT * FROM movies WHERE imdbID = '#{params[:imdbID]}';"
+    @movie = run_sql(sql).first
   else
-    @movie = result.first
+    @movie = result.first # in DB
   end
-  binding.pry
   erb(:movie)
 end
 
