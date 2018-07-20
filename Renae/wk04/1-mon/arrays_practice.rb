@@ -17,6 +17,8 @@
 
 # 5. Sort the remaining days alphabetically
 
+require 'pry'
+
 days_of_the_week = ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday']
 
 days_of_the_week.unshift('Sunday').pop()
@@ -28,7 +30,7 @@ weekends = days_of_the_week.last, days_of_the_week.first
 days_of_the_week = [weekdays, weekends]
 
 days_of_the_week.pop()
-  
+
 days_of_the_week[0].sort()
 
 

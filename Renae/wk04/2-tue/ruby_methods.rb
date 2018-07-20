@@ -100,9 +100,22 @@ letter_reverse("Now I know what a TV dinner feels like")
 # # => "unrequited"
 
 def longest_word(array)
-  word = Enumerable.array.max
-  binding.pry
+  empty_array = []
+  array.each do |arr|
+    arr_length = arr.length
+  
 end
 return word
   longest_word(["oh", "good", "grief"])
+  binding.pry
   
+
+  def lengths(words)
+    empty_array = []
+    words.each do |word|
+      word_length = word.length
+    empty_array.push(word_length)
+    end
+    return empty_array
+  end
+  p lengths(words)

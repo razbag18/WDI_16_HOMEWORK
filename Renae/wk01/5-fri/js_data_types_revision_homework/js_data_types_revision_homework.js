@@ -217,8 +217,9 @@ if (num % 3 === 0 && num % 5 === 0){
         return("Fuzz")
     }else if(num % 5 ===0){
         return("Buzz")
-    }else{return(num)}
+    }else{return(num)
     }
+}
 
 
 callNum()

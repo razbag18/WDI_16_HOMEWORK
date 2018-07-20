@@ -1,0 +1,21 @@
+.buttons {
+display: flex;
+}
+
+.start, .reset, .pause {
+  flex: 1;
+  background: #4c7db5;
+  margin: 10%;
+  padding: 20px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 15pt;
+  border-radius: 14px;
+  color: white;
+  box-shadow: 0 9px #999;
+  
+}
+.reset{
+  margin-right: 5%;
+  margin-left: 5%;
+}
+

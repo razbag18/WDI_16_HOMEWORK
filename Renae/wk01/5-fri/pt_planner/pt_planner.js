@@ -3,15 +3,82 @@
 //Incorporating all lines
 
 var trainLines = [
-    ['Flinders Street', 'Richmond', 'East Richmond', 'Burnley', 'Hawthorn', 'Glenferrie'], 
-    ['Southern Cross', 'Richmond', 'South Yarra', 'Prahan', 'Windsor'],
-    ['Flagstaff', 'Melbourne Central', 'Parliament', 'Richmond', 'Kooyong', 'Tooronga']
+    {
+    line: ['Flinders Street', 'Richmond', 'East Richmond', 'Burnley', 'Hawthorn', 'Glenferrie'], 
+    },
+    {
+    line: ['Southern Cross', 'Richmond', 'South Yarra', 'Prahan', 'Windsor'],
+    },
+    {
+    line:['Flagstaff', 'Melbourne Central', 'Parliament', 'Richmond', 'Kooyong', 'Tooronga']
+    }    
 ];
+
+
+var origin = [];
+var destination = [];
+var journey =[];
+
+origin.push('Flinders Street') 
+destination.push('Kooyong');
+
+
+
+for (var i=0; i <trainLines.length; i++){ //looping through the lines
+  for (var j= 0; j <origin.length; j++){//nested loop to loop through items in basket
+      if(trainLines[i].line === origin[j]){ //if equal to items in basket and now not case sensitive because turning everything to lowercase
+         journey.push(origin);//push Flinders Street, Richmond to journey
+        }
+  
+    }
+
+}
+
+for (var k=0; k <trainLines.length; k++){ //looping through the lines
+    for (var l= 0; l <destination.length; l++){//nested loop to loop through items in basket
+        if(trainLines[k].line === destination[l]){ //if equal to items in basket and now not case sensitive because turning everything to lowercase
+           journey.push(destination);
+
+           //push Richmond, Kooyong to journey
+          }
+    
+      }
+  
+  }
+  
+  
+
+
+
+
+
+
+
+
+
+
 //origin alameinLine
 var origin = 'Flinders Street';  
-var destination = 'Windsor'
-var indexOrigin1 = trainLines[0].indexOf(origin);
-var changeOver =trainLines[0].indexOf("Richmond");
+var destination = 'Windsor';
+var indexOrigin1 = trainLines[i].indexOf(origin);
+var journey = [];
+var changeOver =trainLines[i].indexOf("Richmond");
+
+for (var i=0; i <trainLines.length; i++){ //looping through the library
+    for (var j= 0; j <journey.length; j++){//nested loop to loop through items in basket
+        if(trainLines[i] === journey[j]){ //if equal to items in basket and now not case sensitive because turning everything to lowercase
+            journey.push(trainLines[i].slice(indexOrigin1, changeOver))
+          }
+    }
+  
+  
+  }
+
+
+
+
+var indexOrigin1 = trainLines[i].indexOf(origin);
+
 var startOfJourney = trainLines[0].slice(indexOrigin1, changeOver); 
 
 //destination on sandyLine

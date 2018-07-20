@@ -53,11 +53,17 @@ users = {
     :favorite_numbers => [12, 14, 85],
   },
 }
+
+# users.keys
+# users.values
+# users.class
+# users.values.size
+
 # How would you access Jonathan's Twitter handle (i.e. the string "tronathan")?
 users["Jonathan"][:twitter]
 
 # How would you add the number 7 to Erik's favorite numbers?
-users["Erik"][:favorite_numbers].push(7)
+users["Erik"][:favorite_numbers].push(7) #can write <<7
 
 # How would you add yourself to the users hash?
 users["Renae"] = {}
@@ -69,9 +75,19 @@ users["Erik"][:favorite_numbers].min
 
 # How would you return an array of Anil's favorite numbers that are also even?
 users["Anil"][:favorite_numbers].select(&:even?)
+
+# even_number = users["Anil"][:favorite_numbers].select do |number|
+#   number.even?
+# end
+
 # How would you return an array of the favorite numbers common to all users?
 users["Erik"][:favorite_numbers] & users["Anil"][:favorite_numbers] & users["Jonathan"][:favorite_numbers]
 # How would you return an array containing all users' favorite numbers, sorted, and excluding duplicates?
 all_users_fav_nums = users["Erik"][:favorite_numbers] + users["Anil"][:favorite_numbers] + users["Jonathan"][:favorite_numbers]
 
 all_users_fav_nums = all_users_fav_nums.uniq.sort
+
+
+result_arr = users.values.map do |hash| #map goes through array you give it, transforming an existing array to a new one, you give it the how, and you get a new array back with the result of the instructions you gave it. New array is called result_arr in this case 
+  hash[:favorite_numbers] #just return this part for each hash
+end.flatten.sort.uniq #flatten changes nested array to just one array, sorts it with .sort and get rid of duplicates with .uniq

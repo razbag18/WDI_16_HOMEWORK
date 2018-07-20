@@ -53,12 +53,13 @@ delete '/friends/:id' do
 
 end
 
-#Page that edits individual friends details
+#route that edits individual friends details
 get '/friends/:id/edit' do
   @friends = Friend.find(params[:id])
   erb :edit
 end
 
+# edit friends
 put '/friends/:id' do
   friend = Friend.find(params[:id])
   friend.name = params[:name]

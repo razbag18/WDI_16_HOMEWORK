@@ -37,6 +37,7 @@ margin-bottom: 10%;
   background-color: orangered;
   margin: 2px;
   width: 40%;
+  flex: 1;
 }
 
 .checking{
@@ -44,6 +45,7 @@ margin-bottom: 10%;
   background-color: yellow;
   margin: 2px;
   width: 40%;
+  flex: 1;
 }
 
 body{
@@ -53,6 +55,7 @@ body{
 
 .enter-amount, .enter-amount-here {
   background-color: green;
+  padding: 2.5%;
 }
 
 .button-div {
@@ -66,5 +69,17 @@ body{
   text-align: center;
 }
 
+.buttons{
+  display: flex;
+  margin: 10px;
+}
+
+.withdraw {
+  flex: 1;
+}
+
+.checking-deposit {
+  flex: 1;
+}
 /* font-family: 'Special Elite', cursive;
  */
