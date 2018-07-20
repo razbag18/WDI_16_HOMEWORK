@@ -1,5 +1,17 @@
 <h1> <%= @friends.name %> </h1> 
 <img src="<%= @friends.image_url %>" >
-<p> <%= @friends.phone_number%></p>
+<p>Phone Number: <%= @friends.phone_number%></p>
 
-<a href="/">Back</a>
+<a href="/"><button>Back</button></a>
+
+
+<a href="/friends/<%= @friends.id %>/edit">
+<button>Edit Details</button>
+</a>
+
+
+<form action="/friends/<%= @friends.id%>" method="post">
+<%# delete doesnt exist %>
+<input type="hidden" name="_method" value="delete">
+  <button>Delete</button>
+</form>

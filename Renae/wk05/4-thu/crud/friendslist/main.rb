@@ -48,7 +48,7 @@ end
 #Page that deletes friend
 delete '/friends/:id' do
   friend = Friend.find( params[:id] )
-  friend.destory
+  friend.destroy
   redirect '/'
 
 end
