@@ -23,6 +23,6 @@ document.addEventListener('change', function(event){
     background.className = 'sydney'
   }
   else if (event.target.value === "ATX"){
-  background.className = "austin"
-  }
+  background.className = 'austin'
+  } else background.className = ''
 })
