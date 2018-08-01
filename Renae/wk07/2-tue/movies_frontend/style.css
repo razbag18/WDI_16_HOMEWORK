@@ -1,8 +1,5 @@
 body {
   background-color: black;
-}
-
-.movie-search-page {
   background-image: url(/images/depositphotos_81460636-stock-illustration-multimedia-cinema-hand-drawn-seamless.jpg); 
   background-size: 200px 200px;
   background-repeat: repeat-x;
@@ -13,9 +10,10 @@ h1 {
   color: white;
   background-color: black;
   text-align: center;
-  border-radius: 25px;
   margin-top: 5%;
-  font-size: 50px;
+  font-size: 3.5em;
+  height: 10vh;
+  width: 100vw
 }
 
 form {
@@ -25,21 +23,24 @@ form {
 
 input.submission_field {
   font-size: 20px;
-  width: 450px;
-  height: 25pt;
+  width: 80vw;
+  height: 5vh;
   box-shadow: 10px 10px grey;
 }
 
 .results {
   display: flex;
+  flex-wrap: wrap;
 }
 
-p {
-  display: inline-block; 
+.results p {
+  flex: 1 100%;
   font-family: 'Open Sans', sans-serif; 
   color: white;
 }
 
-img {
-  display: inline-block;
-} 
+.results img {
+  flex: 1 100%;  
+
+}
+

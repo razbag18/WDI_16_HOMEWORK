@@ -4,6 +4,10 @@ function onSuccess(responseData) {
 
 var searchForm = document.querySelector('form')
 var userInput = document.querySelector('.submission_field')
+
+// Find results section in DOM
+var results = document.querySelector('.results')
+
 searchForm.addEventListener('click', function(event){
   event.preventDefault();
   if (event.target.classList.contains('search-btn')){
@@ -17,14 +21,12 @@ searchForm.addEventListener('click', function(event){
   
     $.ajax(options).done(function(res) {
     
-        
+      results.textContent = ""
         res.Search.forEach(function(movie) {
   
           if (movie["Type"] === "movie") {
-  
-            // Find results section in DOM
-            var results = document.querySelector('.results')
-
+           
+            var container = document.createElement('container')
             // create paragraph element
             var paragraph = document.createElement('p')
 
@@ -35,6 +37,7 @@ searchForm.addEventListener('click', function(event){
             var a = document.createElement('a')
 
             // append result title to paragraph
+
             paragraph.append(movie["Title"])
             
             //assign image.src as movie poster url
@@ -43,7 +46,9 @@ searchForm.addEventListener('click', function(event){
             //<p><a href= movie["Title"]</a></p>
 
             // add result to paragraph, image and anchor
-            results.append(paragraph, image, a)
+            results.append(container)
+            
+            container.append(paragraph, image, a)
           }
         })
       
