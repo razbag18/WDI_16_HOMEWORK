@@ -36,3 +36,14 @@
 
   searchForm.on('submit', handleSubmit);
 
+
+  $('h2').on('click', function(event){
+    //equivalent to event.target.textContent()
+    console.log($(event.target).text());
+    // $(event.target).hide();
+    $(event.target).fadeOut();
+  })
+
+  $('parent').on('click', 'h2', function(event){
+    $(event.target).fadeOut();
+  })
