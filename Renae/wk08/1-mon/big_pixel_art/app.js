@@ -10,4 +10,8 @@ function handleSubmit(event){
 
 colorSearchForm.on('submit', handleSubmit);
 
+for (i = 0; i < 1000; i ++){
+  $('.results').append( "<div></div>" );
+}
 
+$('div').addClass("square");
