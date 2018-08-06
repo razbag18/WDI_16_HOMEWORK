@@ -15,3 +15,11 @@ for (i = 0; i < 1000; i ++){
 }
 
 $('div').addClass("square");
+
+$(".square").click(function(event){
+  var color = ('green');
+  event.target.style.background= color
+
+})
+
+

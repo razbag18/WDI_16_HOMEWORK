@@ -2,6 +2,9 @@
   border: 2px solid black;
   width: 20px;
   height: 20px;
+}
+
+section {
   display: flex;
   flex-wrap: wrap;
 }
@@ -9,5 +12,5 @@
 .square{
   height: 20px;
   width: 20px;
-  border: 2px solid black;
+  border: 0.02px solid black;
 }
