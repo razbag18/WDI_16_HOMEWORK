@@ -32,28 +32,27 @@ searchForm.on('submit', handleSubmit);
 
 $(window).scroll(function() {
   if($(window).scrollTop() == $(document).height() - $(window).height()) {
-      const options = {
-        url: `http://api.giphy.com/v1/gifs/search?q=${ (searchBar).val() }&api_key=DeXaS0d74hjF73LTWtIlIslzOGhZGE94&limit=10&offset=${offset}`,
-        method: 'get',
-        dataType: 'json'
-      }
-      
-      const showSearchResults = function(res){
-        
-        const giphy = res.data;
+    const options = {
+      url: `http://api.giphy.com/v1/gifs/search?q=${ (searchBar).val() }&api_key=DeXaS0d74hjF73LTWtIlIslzOGhZGE94&limit=10&offset=${offset}`,
+      method: 'get',
+      dataType: 'json'
+    }
     
-        $(giphy).each(function(index, gif){
-          var image = new Image(300, 200)
-          var giphyImg = gif.images.downsized.url;
-          image.src = giphyImg;
-          $(image).append(giphyImg);
-          $(resultsDiv).append(image);
-          offset ++;
-        })
-    
-      }
-    
-      $.ajax(options).done(showSearchResults);
+    const showSearchResults = function(res){
+      const giphy = res.data;
+  
+      $(giphy).each(function(index, gif){
+        var image = new Image(300, 200)
+        var giphyImg = gif.images.downsized.url;
+        image.src = giphyImg;
+        $(image).append(giphyImg);
+        $(resultsDiv).append(image);
+        offset ++;
+      })
+  
+    }
+  
+    $.ajax(options).done(showSearchResults);
     }
   }
 );
