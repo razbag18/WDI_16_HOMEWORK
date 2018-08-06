@@ -4,6 +4,10 @@
   height: 20px;
 }
 
+.container {
+  width: 500px;
+}
+
 section {
   display: flex;
   flex-wrap: wrap;
@@ -13,4 +17,8 @@ section {
   height: 20px;
   width: 20px;
   border: 0.02px solid black;
+}
+
+.results {
+  background-size: 500px;
 }

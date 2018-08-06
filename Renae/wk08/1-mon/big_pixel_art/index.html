@@ -6,20 +6,21 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="reset.css">
 </head>
 <body>
-  
-  <form action="" method="get">
-    <input class="user-input" name="palette" type=text placeholder="Choose a colour...">
-    <button class="search-btn">Search</button>
-  </form>
-  
-  <section class="brush-box">
-    
-  </section>
-
-  <section class="results"></section>
-
+  <section class="container">
+    <form action="" method="get">
+      <input class="user-input" name="palette" type=text placeholder="Choose a colour...">
+      <button class="search-btn">Search</button>
+    </form>
+    <section class="brush-box"></section>
+    <form class ="movie-form" action="" method="get">
+      <input type="text" class="user-movie-input" placeholder="Fave movie">
+      <button class="movie-search-btn">Search</button>
+    </form>
+    <section class="results"></section>
+</section>
 <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 <script src="app.js"></script>
 </body>
