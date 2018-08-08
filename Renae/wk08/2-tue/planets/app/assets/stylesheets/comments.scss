@@ -1,3 +1,59 @@
 // Place all the styles related to the comments controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  background-image: url("https://img.purch.com/w/660/aHR0cDovL3d3dy5zcGFjZS5jb20vaW1hZ2VzL2kvMDAwLzA0My8zMjcvb3JpZ2luYWwvYXJvdW5kLWEtc3Rhci1zeXN0ZW0tMTYwMC5qcGc=");
+  color: white;
+  font-family: 'Codystar', cursive;
+  text-align: center;
+}
+
+.title {
+  font-size: 10vw;
+}
+
+img {
+  width: 50vw;
+  height: auto;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  place-content: center;
+}
+
+h1 {
+  font-size: 8vw;
+}
+
+.planets-list {
+  font-size: 5vw;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: orange;
+}
+
+a:active {
+  text-decoration: underline;
+}
+
+form{
+  display: inline-grid;
+}
+
+.comment-content{
+  font-size: 3vw;
+}
