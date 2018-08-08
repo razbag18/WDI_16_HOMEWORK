@@ -1,0 +1,14 @@
+<h1>CRUD Planets</h1>
+
+<form action="/planets" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <%# security %>
+  <input type="text" name="name" placeholder="Planet name" value="">
+  <input type="text" name="img_url" placeholder="url" value="">
+  <button>create</button>
+</form>
+
+
+<% @planets.each do| planet | %>
+  <p><a href="/planets/<%= planet.id %>"><%= planet.name %></a></p>
+<% end %>

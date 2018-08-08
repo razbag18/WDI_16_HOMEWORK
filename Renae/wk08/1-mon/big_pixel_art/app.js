@@ -31,7 +31,6 @@ function movieHandleSubmit(event){
   
   const options = {
     url: `http://omdbapi.com/?s=${ userMovieInput.val() }&apikey=2f6435d9`,
-    //back tick `` instead of quotes for intripolation
     method: 'get',
     dataType: 'json'
   }
@@ -40,7 +39,7 @@ function movieHandleSubmit(event){
     const movie = res.Search[0].Poster;
       $('.results').css('background-image', 'url(' + movie + ')')
   }
-  //send a request to OMDB API
+  
   $.ajax(options).done(showSearchResult)
 }
 
