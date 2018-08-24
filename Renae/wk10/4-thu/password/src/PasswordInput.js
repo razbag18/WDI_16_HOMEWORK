@@ -1,5 +1,5 @@
 import React from 'react'
-
+import estimateStrength from './estimateStrength'
 export default class PasswordInput extends React.Component {
 
   constructor(){
@@ -11,14 +11,11 @@ export default class PasswordInput extends React.Component {
   }
 
   handleChange(event) {
-    let { pwdScore} = this.state
     const password = event.target.value
-    const pwLength = password.length
-    let lengthScore = 0
 
     event.persist()
     this.setState(() => {
-      return {pwdScore}
+      return {pwdScore: estimateStrength(password).score}
     })
   }
 
@@ -26,6 +23,7 @@ export default class PasswordInput extends React.Component {
     const { pwdScore } = this.state
     return <div>
         <input onChange={this.handleChange} type="text"/>
+        <div style= "green" className= "result-definer"></div>
         <span>{pwdScore}</span> 
     </div>
 
