@@ -1,5 +1,7 @@
 import React from 'react'
 import estimateStrength from './estimateStrength'
+import Bar from './Bar'
+import './Bar.css'
 export default class PasswordInput extends React.Component {
 
   constructor(){
@@ -21,11 +23,40 @@ export default class PasswordInput extends React.Component {
 
   render(){
     const { pwdScore } = this.state
-    return <div>
-        <input onChange={this.handleChange} type="text"/>
-        <div style= "green" className= "result-definer"></div>
-        <span>{pwdScore}</span> 
-    </div>
+  
+
+    if (pwdScore === 1){
+      return <div>
+        < Bar color="red" width={`${pwdScore/5 * 100}%`}/>
+          <input onChange={this.handleChange} type="password"/>
+          <div><span>{pwdScore}</span> out of 5</div>
+      </div>
+    } else if(pwdScore === 2){
+      return <div>
+        < Bar color="orange" width={`${pwdScore/5 * 100}%`}/>
+          <input onChange={this.handleChange} type="password"/>
+          <div><span>{pwdScore}</span> out of 5</div>
+      </div>
+    }else if (pwdScore === 3){
+      return <div>
+        < Bar color="yellow" width={`${pwdScore/5 * 100}%`}/>
+          <input onChange={this.handleChange} type="password"/>
+          <div><span>{pwdScore}</span> out of 5</div>
+      </div>
+    } else if(pwdScore === 4){
+      return <div>
+        < Bar color="green" width={`${pwdScore/5 * 100}%`}/>
+          <input onChange={this.handleChange} type="password"/>
+          <div><span>{pwdScore}</span> out of 5</div>
+      </div>
+    }
+    else {
+      return <div>
+        < Bar color="lime" width={`${pwdScore/5 * 100}%`}/>
+          <input onChange={this.handleChange} type="password"/>
+          <div><span>{pwdScore}</span> out of 5</div>
+      </div>
+    }
 
     }
 

@@ -1,0 +1,5 @@
+.bar {
+  background-color: yellow;
+  height: 10px;
+  transition: all 300ms ease;
+}
